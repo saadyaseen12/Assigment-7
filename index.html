@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="app.js"></script>
+
+    
+    
+        
+        <script>
+        function validateUsername() {
+          // Get the username value from the input field
+          var username = document.getElementById("username").value;
+          // Define a regular expression for alphanumeric characters
+          var regex = /^[a-zA-Z0-9]+$/;
+          // Check if the username is at least 5 characters long and matches the regex
+          if (username.length >= 5 && regex.test(username)) {
+            // Display a success message
+            alert("Username is valid!");
+          } else {
+            // Display an error message
+            alert("Username is invalid!");
+          }
+        }
+        </script>
+        
+        
+        <form>
+          <label for="username">Enter your username:</label>
+          <input type="text" id="username" name="username">
+          <button type="button" onclick="validateUsername()">Submit</button>
+        </form>
+        
+        
+            
+            <script>
+            function toggleDiv() {
+              // Get the div element by its id
+              var div = document.getElementById("hidden-div");
+              // Check if the div is currently hidden or visible
+              if (div.style.display === "none") {
+                // If hidden, make it visible
+                div.style.display = "block";
+              } else {
+                // If visible, make it hidden
+                div.style.display = "none";
+              }
+            }
+            </script>
+            
+            <button onclick="toggleDiv()">Toggle div</button>
+            <div id="hidden-div" style="display: none;">
+              This is a hidden div
+            </div>
+            
+</body>
+</html>
